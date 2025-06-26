@@ -1,0 +1,46 @@
+%! Author = mr_sand
+%! Date = 23.06.2025
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage[a4paper,margin=1in]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{lastpage}
+% clear default header/footer
+\fancyhf{}
+
+% set up your header:
+\fancyhead[L]{(02445) Project in Statistical Evaluation of Artificial Intelligence and Data}    % section name on left
+\fancyhead[C]{}             % center empty
+\fancyhead[R]{\today}     % page number on right
+
+% set up your footer:
+\fancyfoot[L]{Mathias Sand (S245365)}    % left footer
+\fancyfoot[C]{}
+\fancyfoot[R]{Page \thepage{} of \pageref{LastPage}}       % right footer
+
+% optional: rule thickness
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+% Document
+\begin{document}
+
+\input{Part1/Main_part_1}
+\newpage
+\input{Part2/Main_part_2}
+\newpage
+\section Github
+	\url{}
+
+
+\end{document}

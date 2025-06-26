@@ -1,0 +1,72 @@
+\section{Part 1}
+
+	\subsection{Paper Selection}
+		Positive Paper: \emph{Automated detection of lung nodules and coronary artery calcium using artificial intelligence on low-dose CT scans for lung cancer screening: accuracy and prognostic value} \cite{paperX}.\\
+		Negative Paper: \emph{Hospital quality classification based on quality indicator data during the COVID-19 pandemic} \cite{paperY}.
+
+	\subsection{Positive Paper Evaluation}
+		The positive paper presents a robust evaluation of an AI model for detecting lung nodules and coronary artery calcium.
+		They use heart scaling to ensure consistent heart size in images, and the models are well-documented.
+		Additionally, the model is validated by two expert radiologists, providing a high level of confidence in the
+		results.
+		Results are supported by confidence intervals and p-values, and the paper includes extensive
+		statistical testing.
+		They use multiple tests and test assumptions for these tests, enhancing the
+		reliability of their findings.
+		The correlation biplot is a useful visualization tool that helps to understand the relationship between
+		model predictions and various attributes of the patients.
+		The paper uses a train/test split for model
+		evaluation.
+
+	\subsection{Negative Paper Evaluation}
+		The negative paper suffers from several critical issues that undermine its findings.
+		The main problem is the bias introduced by inadequate data submissions from hospitals, leading to a
+		non-representative dataset.
+		The authors attempt to classify hospital quality during the COVID-19 pandemic.
+		However, they do not account because these hospitals don't suddenly change their care quality.
+		Then after the pandemic, they will find that all the hospitals are suddenly substantially better, which is
+		not the case.
+		The article uses data transformation techniques, such as averaging per year and collapsing months to a
+		single value, thus removing all trends and seasonality in the data.
+		In addition, the paper replaces NULL
+		values with 0 this lowers the possible score and introduces further bias.
+		The Neural Network (NN) and Decision Tree (DT) models are overfitted to the data, as they do not use early
+		stopping or two-level cross-validation.
+		The authors then conclude that the linear discriminant analysis is the best model, but this conclusion is
+		flawed because the data is not representative of the population and the models are overfitted.
+		When they report results, they do not provide confidence intervals or statistical significance for their
+		results, without which it is impossible to assess the reliability of their findings.
+		There is no standardization or normalization of the data, which helps some models to perform better.
+		Finally, the paper lacks a sufficient description of the models used, making it difficult to replicate their findings.
+
+	\subsection{Recommendations for Improvement of the Negative Paper}
+		To improve the negative paper, the authors should address the following issues:
+
+
+% …
+
+		\begin{itemize}[topsep=2pt, itemsep=1pt, parsep=0pt, partopsep=0pt]
+			\item Ensure that the dataset is representative of the population by addressing the bias introduced by inadequate data submissions from hospitals.
+			\item Avoid replacing NULL values with 0, as this can introduce bias and lower the possible score.
+			\item Use early stopping and two‐level cross‐validation to prevent overfitting of the models.
+			\item Provide confidence intervals and statistical significance for the results to assess the reliability of the findings.
+			\item Standardize and normalize the data to improve model performance.
+			\item Include a more detailed description of the models used to allow for replication of the findings.
+			\item Consider using a more appropriate problem formulation, such as predicting future hospital quality rather than classifying past data.
+		\end{itemize}
+
+		\begin{thebibliography}{9}
+
+			\bibitem{paperX}
+			Chamberlin, J., Kocher, M.~R., Waltz, J., Snoddy, M., Stringer, N.~F.~C., Stephenson, J.,
+			Sahbaee, P., Sharma, P., Rapaka, S., Schoepf, U.~J., Abadia, A.~F., Sperl, J., Hoelzer, P.,
+			Mercer, M., Somayaji, N., Aquino, G., \& Burt, J.~R. (2021).
+			\emph{Automated detection of lung nodules and coronary artery calcium using artificial intelligence on low-dose CT scans for lung cancer screening: accuracy and prognostic value}. \textbf{BMC Medicine}.
+
+			\bibitem{paperY}
+			Nurhaida, I., Dhamanti, I., Ayumi, V., Yakub, F., \& Tjahjono, B. (2024).
+			\emph{Hospital quality classification based on quality indicator data during the COVID-19 pandemic}.
+			\textbf{International Journal of Electrical and Computer Engineering}
+
+
+		\end{thebibliography}
